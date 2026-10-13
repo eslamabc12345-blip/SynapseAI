@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_dark"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="@color/bg_card"
+        android:paddingHorizontal="8dp">
+
+        <ImageView
+            android:id="@+id/btnBack"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_centerVertical="true"
+            android:padding="8dp"
+            android:src="@android:drawable/ic_menu_revert"
+            app:tint="@color/accent"
+            android:contentDescription="back" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="الإعدادات"
+            android:textColor="@color/text_primary"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingVertical="8dp">
+
+            <LinearLayout style="@style/NavItem">
+                <ImageView style="@style/NavIcon" android:src="@android:drawable/ic_menu_view" />
+                <TextView style="@style/NavText" android:text="المظهر" android:layout_weight="1" />
+            </LinearLayout>
+
+            <LinearLayout style="@style/NavItem">
+                <ImageView style="@style/NavIcon" android:src="@android:drawable/ic_menu_mapmode" />
+                <TextView style="@style/NavText" android:text="اللغة" android:layout_weight="1" />
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="العربية" android:textColor="@color/text_secondary" android:textSize="14sp" />
+            </LinearLayout>
+
+            <LinearLayout style="@style/NavItem">
+                <ImageView style="@style/NavIcon" android:src="@android:drawable/ic_popup_reminder" />
+                <TextView style="@style/NavText" android:text="الإشعارات" android:layout_weight="1" />
+                <androidx.appcompat.widget.SwitchCompat
+                    android:id="@+id/switchNotifications"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="true" />
+            </LinearLayout>
+
+            <LinearLayout style="@style/NavItem">
+                <ImageView style="@style/NavIcon" android:src="@android:drawable/ic_menu_send" />
+                <TextView style="@style/NavText" android:text="الرد التلقائي" android:layout_weight="1" />
+                <androidx.appcompat.widget.SwitchCompat
+                    android:id="@+id/switchAutoReply"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="true" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/btnClearHistory"
+                style="@style/NavItem">
+                <ImageView style="@style/NavIcon" android:src="@android:drawable/ic_menu_delete" />
+                <TextView style="@style/NavText" android:text="مسح سجل المحادثات" android:layout_weight="1" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/btnAbout"
+                style="@style/NavItem">
+                <ImageView style="@style/NavIcon" android:src="@android:drawable/ic_menu_info_details" />
+                <TextView style="@style/NavText" android:text="حول التطبيق" android:layout_weight="1" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

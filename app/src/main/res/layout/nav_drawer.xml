@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="280dp"
+    android:layout_height="match_parent"
+    android:layout_gravity="start"
+    android:background="@color/bg_card"
+    android:orientation="vertical"
+    android:paddingTop="24dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:padding="16dp">
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@mipmap/ic_launcher"
+            android:contentDescription="" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:text="@string/app_name"
+            android:textColor="@color/text_primary"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginVertical="8dp"
+        android:background="@color/divider" />
+
+    <LinearLayout
+        android:id="@+id/navNewChat"
+        style="@style/NavItem">
+        <ImageView style="@style/NavIcon" android:src="@android:drawable/ic_menu_edit" />
+        <TextView style="@style/NavText" android:text="المحادثة الجديدة" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/navFavorites"
+        style="@style/NavItem">
+        <ImageView style="@style/NavIcon" android:src="@android:drawable/btn_star_big_off" />
+        <TextView style="@style/NavText" android:text="المفضلة" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/navSettings"
+        style="@style/NavItem">
+        <ImageView style="@style/NavIcon" android:src="@android:drawable/ic_menu_preferences" />
+        <TextView style="@style/NavText" android:text="الإعدادات" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/navAbout"
+        style="@style/NavItem">
+        <ImageView style="@style/NavIcon" android:src="@android:drawable/ic_menu_info_details" />
+        <TextView style="@style/NavText" android:text="حول التطبيق" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/divider" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:padding="16dp">
+
+        <ImageView
+            android:layout_width="26dp"
+            android:layout_height="26dp"
+            android:src="@android:drawable/ic_menu_view"
+            app:tint="@color/accent"
+            android:contentDescription="" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginStart="12dp"
+            android:text="الوضع الليلي"
+            android:textColor="@color/text_primary"
+            android:textSize="15sp" />
+
+        <androidx.appcompat.widget.SwitchCompat
+            android:id="@+id/switchDark"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true" />
+    </LinearLayout>
+
+</LinearLayout>
